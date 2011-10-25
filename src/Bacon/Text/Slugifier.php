@@ -72,7 +72,7 @@ class Slugifier
      * 
      * @return UniDecode 
      */
-    public function uniDecoder()
+    public function getUniDecoder()
     {
         if ($this->uniDecoder === null) {
             if (self::$defaultUniDecoder === null) {
