@@ -20,9 +20,7 @@
  */
 namespace Bacon;
 
-use Zend\Module\Manager,
-    Zend\Config\Config,
-    Zend\Loader\AutoloaderFactory;
+use Zend\Module\Consumer\AutoloaderProvider;
 
 /**
  * Module entry point.
@@ -32,27 +30,11 @@ use Zend\Module\Manager,
  * @copyright  Copyright (c) 2011 Ben Scholzen <mail@dasprids.de>
  * @license    New BSD License
  */
-class Module
+class Module implements AutoloaderProvider
 {
-    /**
-     * Initiate the module.
-     * 
-     * @param  Manager $moduleManager 
-     * @return void
-     */
-    public function init(Manager $moduleManager)
+    public function getAutoloaderConfig()
     {
-        $this->initAutoloader();
-    }
-
-    /**
-     * Initiate the autoloder.
-     * 
-     * @return void
-     */
-    protected function initAutoloader()
-    {
-        AutoloaderFactory::factory(array(
+        return array(
             'Zend\Loader\ClassMapAutoloader' => array(
                 __DIR__ . '/autoload_classmap.php',
             ),
@@ -61,6 +43,6 @@ class Module
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
                 ),
             ),
-        ));
+        );
     }
 }
