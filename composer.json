@@ -1,0 +1,20 @@
+{
+    "name": "dasprid/bacon",
+    "description": "Bacon is a library containing useful components used across many projects.",
+    "type": "library",
+    "license": "New BSD",
+    "keywords": [
+        "zf2",
+    ],
+    "homepage": "https://github.com/DASPRiD/Bacon",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    }
+}
+
