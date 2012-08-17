@@ -20,17 +20,17 @@
  */
 namespace Bacon;
 
-use Zend\Module\Consumer\AutoloaderProvider;
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 
 /**
  * Module entry point.
- * 
+ *
  * @category   Bacon
  * @package    Bacon
  * @copyright  Copyright (c) 2011 Ben Scholzen <mail@dasprids.de>
  * @license    New BSD License
  */
-class Module implements AutoloaderProvider
+class Module implements AutoloaderProviderInterface
 {
     public function getAutoloaderConfig()
     {
