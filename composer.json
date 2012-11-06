@@ -9,5 +9,10 @@
     "homepage": "https://github.com/DASPRiD/Bacon",
     "require": {
         "php": ">=5.3.3"
+    },
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
     }
 }
