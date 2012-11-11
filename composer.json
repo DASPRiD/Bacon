@@ -1,0 +1,18 @@
+{
+    "name": "dasprid/bacon",
+    "description": "ZF2 module for common code across projects",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "framework",
+        "zf2"
+    ],
+    "homepage": "https://github.com/DASPRiD/Bacon",
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    }
+}
